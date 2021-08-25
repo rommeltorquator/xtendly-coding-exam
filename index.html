@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+  <title>Xtendly Coding exam</title>
+
+  <style>
+    .content {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      grid-auto-rows: minmax(100px, auto);
+      grid-gap: 20px;
+      max-width: 980px;
+      margin: 0 auto;
+    }
+
+    /* #content > * {
+      background-color: orange;
+      padding: 30px;
+    } */
+
+    header {
+      grid-column: 1 / 13;
+    }
+
+    main {
+      grid-column: 4 / 13;
+      grid-row: 2 / 4;
+    }
+
+    aside {
+      grid-column: 1 / 4;
+    }
+
+    section {
+      grid-column: 1 / 13;
+      grid-row: 4 / 6;
+    }
+
+    nav {
+      grid-column: 1 / 4;
+    }
+
+    .demo {
+      height: 105px;
+      grid-column: 1 / 13;
+      display: flex;
+      flex-flow: row;
+      background-color: #fff;
+      border-radius: 8px;
+      position: relative;
+      bottom: -540px;
+    }
+
+    .schedule {
+      width: 310px;
+      height: 100%;
+      background-color: #8bc540;
+      display: flex;
+      flex-flow: column;
+      align-items: center;
+      justify-content: center;
+      border-top-left-radius: 8px;
+      border-bottom-left-radius: 8px;
+      clip-path: polygon(0% 0%, 95% 0%, 100% 50%, 95% 100%, 0% 100%);
+    }
+
+    .schedule h2,
+    .schedule p {
+      color: #fff;
+      margin: 0;
+    }
+
+    .schedule h2 {
+      font-size: 28px;
+      font-weight: bold;      
+    }
+
+    .schedule p {
+      font-size: 18px;
+    }
+
+    .improve {
+      width: 670px;
+      height: 100%;
+      background-color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      border-top-right-radius: 8px;
+      border-bottom-right-radius: 8px;
+    }
+
+    .improve h3 {
+      font-size: 22px;
+      font-weight: bold;
+      margin: 0; 
+    }
+
+    .gray {
+      color: #6d6e70;
+    }
+
+    .green {
+      color: #8bc540
+    }
+
+    .inputs {
+      width: 100%;
+      /* background-color: yellow; */
+    }
+
+    .input-text-email {
+      height: 34px;
+      border: 1px solid #dddddd;
+      width: 180px;
+      padding: 0 10px;
+      border-radius: 3px;
+      color: #b8b8b8 !important;
+    }
+
+    .schedule-btn {
+      background-color: #8bc540;
+      color: #fff;
+      height: 35px;
+      width: 210px;
+      border-radius: 3px;
+      font-size: 17px;
+      font-weight: 500;
+      border: 2px solid #6f973b;
+    }
+
+    .fastest {
+      height: 222px; 
+      width: 980px; 
+      /* background-color: #fff;  */
+      position: absolute;
+      display: flex;
+      flex-flow: column;
+      justify-content: center;
+      top: 130px;
+    }
+
+    .white-bg {
+      min-height: 222px; 
+      width: 1400px;
+      /* background-image: -webkit-linear-gradient(-120deg, rgba(255,255,255,0) 0,  rgba(255,255,255,1) 100%, url('images/white-bg.png')); */
+      background-image: url('images/white-bg.png');
+      background-repeat: no-repeat;
+      position: absolute;
+      display: flex;
+      flex-flow: column;
+      justify-content: center;
+      top: 130px;
+    }
+
+    .fastest h1 {
+      color: #85bf3a;
+      font-size: 48px;
+      font-weight: 500;
+      margin-bottom: 0;
+    }
+
+    .fastest h3 {
+      color: #3f3f3f;
+      font-size: 32px;
+      font-weight: 400;
+      margin-bottom: 0;
+    }
+
+    .fastest img {
+      width: 258px;
+      height: auto;
+    }
+  </style>
+</head>
+<body>
+  <div class="main-banner">
+    <div class="white-bg">
+    </div>
+    <div class="content">
+      <div class="fastest">
+        <img src="images/logo.png" alt="Logo">
+        <em><h1>Fastest, Most Accurate</h1></em>
+        <em><h3>Way to Close Your Books!</h3></em>
+      </div>
+    </div>
+    <div class="content">
+      <div class="demo">
+        <div class="schedule">
+          <h2>SCHEDULE A DEMO</h2>
+          <p>Learn More About FloQast.</p>
+        </div>
+
+        <div class="improve">
+          <h3 class="mb-3"><span class="gray">Learn How FloQast Can</span> <span class="green">Improve Your Month-End</span></h3>
+          <div class="inputs">
+            <p class="text-center" style="margin: 0;">
+              <input class="input-text-email" type="text" value="First name*">
+              <input class="input-text-email" type="email" value="Email*">
+              <input class="schedule-btn" type="submit" value="SCHEDULE NOW">
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
